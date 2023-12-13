@@ -11,13 +11,13 @@ app.use(cors());
 app.post("/api/ask", async (req, res) => {
   const options = {
     method: "POST",
-    header: {
-      "Authorization": "Bearer " + process.env.OPENAI_API_KEY,
+    headers: {
+      Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
       model: "gpt-3.5-turbo",
-      messages: [{ role: "user", content: req.body.message}],
+      messages: [{ role: "user", content: req.body.message }],
       max_tokens: 100,
     }),
   };
