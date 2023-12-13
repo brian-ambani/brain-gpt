@@ -78,14 +78,24 @@ nav {
 input {
   width: 100%;
   border: none;
+  font-size: 20px;
   background-color: rgba(255, 255, 255, 0.5);
   padding: 12px 15px;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.05) 0 54px 55px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 54px 55px, rgba(0, 0, 0, 0.05) 0 -12px 30px,
+    rgba(0, 0, 0, 0.05) 0 4px 6px, rgba(0, 0, 0, 0.05) 0 12px 3px,
+    rgba(0, 0, 0, 0.05) 0 -3px 5px;
 }
 
 input:focus {
   outline: none;
+}
+
+#submit {
+  position: absolute;
+  bottom: 15px;
+  right: 0;
+  cursor: pointer;
 }
 
 .info {
