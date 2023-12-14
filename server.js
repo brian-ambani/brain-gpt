@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.post("/api/ask", async (req, res) => {
+app.post("/completions", async (req, res) => {
   const options = {
     method: "POST",
     headers: {
